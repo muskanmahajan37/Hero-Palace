@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hero Palace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row h-100 ">
+      <div class="col-lg-3 col-xs-12 primarycolor h-100 " style="position:fixed">
+        <div class="list-group primarycolor mt-3">
+          <a href="#" style="height:6rem;" class="mx-3 text-center list-group-item list-group list-item-action  primarycolor shadow-lg">
+            <i class="fas fa-motorcycle fa-4x  iconcolor"></i></a>
+
+          <div class="mt-5">
+            <a id="employeeListBtn" href="#" style="height:3rem;" class=" mx-3 mb-1 mt-2  text-white  list-group-item list-group list-item-action  primarycolor shadow-lg">
+              <i class="fas fa-list-alt iconcolor"></i>&nbsp&nbsp&nbsp&nbsp&nbsp Employee List</a>
+            <a id="employeeSignUpBtn" href="#" style="height:3rem;" class=" mx-3 mb-1 mt-2  text-white  list-group-item list-group list-item-action  primarycolor shadow-lg">
+              <i class="fas fa-list-alt iconcolor"></i>&nbsp&nbsp&nbsp&nbsp&nbsp Employee Signup</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-xs-12 offset-3">
+        <div class="row primarycolor " style="height:120px;">
+          <div class="col-lg-8 col-xs-12">
+
+          </div>
+          <div class="col-lg-2 col-xs-12">
+
+            <button id="backToHomepageBtn" class="btn btn-warning m-4 p-2 btn-lg " type="button" name="button">
+              <i class="fas fa-home"></i>&nbsp&nbspBack to HomePage</button>
+
+          </div>
+        </div>
+
+        <div id="employeeListDiv">
+          <h1 class="text-secondary text-center mt-3">Employee List</h1>
+        </div>
+
+        <div id="employeeSignUpDiv" style="display:none;">
+          <div class="row">
+            <div class="col-lg-12 col-xs-12 ">
+              <h2 class="text-center text-secondary mt-5">Employee Sign Up Form</h2>
+              <form class="mx-auto pl-5">
+                <div class="form-group w-75 mt-4">
+                  <label>Full Name :</label>
+                  <input id="fullNameField" type="text" class="form-control" placeholder="enter employee name" required="true">
+                </div>
+                <div class="form-group w-75">
+                  <label>Email:</label>
+                  <input id="emailField" type="email" class="form-control" placeholder="enter email" required="true">
+                </div>
+                <div class="form-group w-75">
+                  <label>New Password:</label>
+                  <input id="passwordField" type="text" class="form-control" placeholder="enter password at least 6 characters" required="true">
+                </div>
+
+                <div class="form-group w-75">
+                  <label>Mobile No :</label>
+                  <input id="mobileNumberField" type="number" class="form-control" placeholder="enter mobile number" required="true">
+                </div>
+                <div class="form-group  w-75">
+                  <label>Post : </label>
+                  <input id="postField" type="text" class="form-control" placeholder="enter Post Name" required="true">
+                </div>
+                <div class="form-group w-75 ">
+                  <label>Address :</label>
+                  <input id="addressField" type="text" class="form-control" placeholder="enter Address" required="true">
+                </div>
+
+                <div class="form-group w-75">
+                  <label for="sel1">Sex:</label>
+                  <select class="form-control" id="sexOption">
+                    <option value="0" disabled selected>Select your sex</option>
+                    <option value="1">Female</option>
+                    <option value="2">Male</option>
+                    <option value="3">Other</option>
+                  </select>
+                </div>
+                <input id="signUpBtn" class="btn btncolor btn-lg" type="submit" name="sign Up" value="Sign Up">
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div id="employeeSignUpSuccessDiv" class="container mx-auto mt-5  text-center" style="display:none;">
+          <h2 class=" text center text-success mt-5">Added Product Successfully&nbsp&nbsp<i class="fas fa-check-circle"></i></h2>
+          <button class=" mt-5 btn btn-success btn-lg" id="addanotheremployeeBtn" type="button" name="button">Signup Another</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="bootstrap/jquery-3.3.1.slim.min.js"></script>
+  <script src="bootstrap/popper.min.js"></script>
+  <script type="text/javascript" src="js/manageemployee.js"></script>
+</body>
+
+</html>

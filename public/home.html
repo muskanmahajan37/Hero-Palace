@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home - Hero Palace</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script type="text/javascript" src="js/loading.js"></script>
+</head>
+
+<body>
+
+  <div id="preloader" class="onsignIn">
+    <div class="text-center logotext">
+      <img src="img/loadinglogo.gif" alt="loadinglogo"><br><br>
+      <h3 class="iconcolor text-center">&nbsp&nbsp&nbsp&nbsp<i class="text-white far fa-grin-beam"></i>&nbsp&nbspLoading..&nbsp&nbsp<br><br>
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row h-100 ">
+      <div class="col-lg-3 col-xs-12 primarycolor h-100 " style="position:fixed">
+        <div class="list-group primarycolor mt-3">
+          <a href="#" style="height:6rem;" class="mx-3 text-center list-group-item list-group list-item-action  primarycolor shadow-lg">
+            <i class="fas fa-motorcycle fa-4x  iconcolor"></i></a>
+          <form class="form-inline mb-1 mt-4 mx-4">
+            <div class="input-group">
+              <input type="number" class="form-control text-center" name="serachques" placeholder="entry number">
+              <div class="input-group-prepend">
+                <button class="btn btncolor"><i class="fas fa-search"></i></button>
+              </div>
+            </div>
+          </form>
+          <p class="  text-white mt-4 mb-2"> <i class=" ml-4 fas fa-home iconcolor"></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHome</p>
+          <a id="addNewEntryBtn" href="#" style="height:3rem;" class=" mx-3 mb-1 mt-2  text-white  list-group-item list-group list-item-action  primarycolor shadow-lg">
+            <i class="fas fa-list-alt iconcolor"></i>&nbsp&nbsp&nbsp&nbsp&nbsp Entry List</a>
+
+          <a id="analyticsBtn" href="#" style="display:none; height:3rem;" class="mx-3 mb-1 mt-2   text-white  list-group-item list-group list-item-action  primarycolor shadow-lg">
+            <i class="fas fa-chart-pie iconcolor"></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAnalytics</a>
+
+          <a id="manageProductBtn" href="#" style="display:none; height:3rem;" class=" mx-3 mb-1 mt-2  text-white  list-group-item list-group list-item-action  primarycolor shadow-lg">
+            <i class="fas fa-cubes iconcolor"></i>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspManage Products</a>
+
+          <a id="manageAdminBtn" href="#" style="display:none; height:3rem;" class="mx-3 mb-1 mt-2  text-white  list-group-item list-group list-item-action  primarycolor shadow-lg">
+            <i class="fas fa-user-shield iconcolor"></i>&nbsp&nbsp&nbsp&nbspManage Admin</a>
+
+          <a id="manageEmployeeBtn" href="#" style="display:none; height:3rem;" class="mx-3 mb-1 mt-2   text-white  list-group-item list-group list-item-action  primarycolor shadow-lg">
+            <i class="fas fa-users iconcolor"></i>&nbsp&nbsp&nbsp&nbspManage Employee</a>
+
+          <a id="signOutBtn" href="#" style="height:3rem;" class=" mx-3 mb-4 mt-2  text-white  list-group-item list-group list-item-action  primarycolor shadow-lg">
+            <i class="fas fa-sign-out-alt iconcolor"></i>&nbsp&nbsp&nbsp&nbspSign Out</a>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-xs-12 offset-3">
+        <div class="row primarycolor " style="height:120px; ">
+          <div class="col-lg-3">
+            <ul class="list-group mt-2">
+              <li class="list-group-item primarycolor textcolor shadow-lg">Total Entry Today :</li>
+              <li class="list-group-item primarycolor textcolor shadow-lg">Total Update Today :</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+          </div>
+          <div class="col-lg-3 text-center">
+            <h5 class="textcolor mt-4">Welcome</h5>
+            <h5 class="iconcolor" id="usernameLabel"></h5>
+          </div>
+        </div>
+
+        <div id="investDiv">
+          <h1 class="mt-3 mx-3 text-secondary">New Entry</h1>
+          <form class="mt-3">
+            <div class="form-row mx-3">
+              <div class="col">
+                <label for="invest">Invest No. </label>
+                <input id="investNoField" type="number" class="form-control" placeholder="enter invest no." style="width:60%;" required>
+              </div>
+              <div class="col">
+                <label for="date">Date: </label>
+                <input id="dateField" type="date" class="form-control" placeholder="Pick date" style="width:60%;" required>
+              </div>
+              <div class="col">
+                <label for="date">Last Date: </label>
+                <input id="lastdateField" type="date" class="form-control" placeholder="Pick date" style="width:60%;" required>
+              </div>
+
+            </div>
+            <div class="form-row  mx-4 mt-3">
+              <label class="text-success " for="customer "><strong><i class="fas fa-fingerprint"></i>&nbsp&nbsp&nbspCustomer Info:</strong></label>
+            </div>
+
+            <div class="form-row  mx-3 mt-2">
+              <div class="col">
+                <label for="mobile">&nbspMobile:</label>
+                <input id="customerMobielNumberField" type="number" class=" w-50 form-control" placeholder="enter mobile number" required>
+              </div>
+            </div>
+            <div class="form-row mx-3 mt-2">
+              <div class="col">
+                <label for="customer">&nbspCustomer Name:</label>
+                <input id="customerNameField" type="text" class="w-50 form-control" placeholder="enter customer name" style="width:50%;" required>
+              </div>
+            </div>
+
+            <div class="form-row  mx-3 mt-2">
+              <div class="col">
+                <label for="mother">&nbspMother:</label>
+                <input id="customerMotherNameField" type="text" class="form-control" placeholder="enter mother's name" required>
+              </div>
+              <div class="col">
+                <label for="father">&nbspFather:</label>
+                <input id="customerFatherNameField" type="text" class="form-control" placeholder="enter father's name" required>
+              </div>
+            </div>
+            <div class="form-row  mx-3 mt-2">
+              <div class="col">
+                <label for="Address">&nbspAddress:</label>
+                <input id="customerAddressField" type="text" class="form-control" placeholder="enter Address" required>
+              </div>
+              <div class="col">
+                <label for="postoffice">&nbspPostoffice:</label>
+                <input id="customerPostofficeField" type="text" class="form-control" placeholder="enter postoffice" required>
+              </div>
+            </div>
+            <div class="form-row  mx-3 mt-2">
+              <div class="col">
+                <label for="Village">&nbspVillage:</label>
+                <input id="customerVillageField" type="text" class="form-control" placeholder="enter Village" required>
+              </div>
+              <div class="col">
+                <label for="district">&nbspDistrict:</label>
+                <input id="customerDistrictField" type="text" class="form-control" placeholder="enter district" required>
+              </div>
+            </div>
+
+            <div class="form-row  mx-3 mt-2">
+              <div class="col">
+                <label for="upzilla">&nbspUpzilla:</label>
+                <input id="customerUpzillaField" type="text" class="form-control w-50" placeholder="enter upzilla" required>
+              </div>
+            </div>
+
+            <div class="form-row  mx-4 mt-3">
+              <label class="text-success " for="customer "> <strong><i class="fas  fa-motorcycle"></i>&nbsp&nbsp&nbspProduct Info:</strong></label>
+            </div>
+
+            <div class="form-row  mx-3 mt-2">
+              <div class="col">
+                <label for="model">&nbspModel:</label>
+                <select id="modelSelector" class="form-control" name="model name" required>
+                  <option value="" disabled selected>Select Model</option>
+                </select>
+              </div>
+              <div class="col">
+                <label for="color">&nbspColor:</label>
+                <select id="colorlSelector" class=" w-75 form-control" name="color name" required>
+                  <option value="" disabled selected>Select color</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row  mx-4 mt-3">
+              <label class="text-success " for="customer "><strong><i class="fas fa-money-bill-alt"></i>&nbsp&nbsp&nbspPricing:</strong> </label>
+            </div>
+
+            <div class="form-row  mx-3 mt-2">
+              <div class="col">
+                <label for="price">&nbspPrice:</label>
+                <input id="productPriceField" type="number" class="form-control" placeholder="enter price" required>
+              </div>
+              <div class="col">
+                <label for="downpayment">&nbspDown Payment:</label>
+                <input id="productDownPaymentField" type="number" class="form-control" placeholder="enter down payement" required>
+              </div>
+            </div>
+
+            <div class="form-row  mx-3 mt-2">
+              <div class="col">
+                <label for="vat">&nbspVat:</label>
+                <input id="productVatField" type="number" class="form-control" placeholder="enter vat" required>
+              </div>
+              <div class="col">
+                <label for="noofinstallment">&nbsp Number of installment:</label>
+                <input id="productNoOfInstallmentField" type="number" class="form-control" placeholder="number of installment" required>
+              </div>
+
+            </div>
+
+            <div class="form-row  mx-3 mt-2">
+              <div class="col">
+                <label for="sellingprice">&nbspSeliing price:</label>
+                <input id="productSellingPriceField" type="number" class="form-control" placeholder="selling price:" readonly>
+              </div>
+              <div class="col">
+                <label for="rent">&nbspMonthly rent:</label>
+                <input id="productMonthlyRentField" type="number" class="form-control" placeholder="monthly rent:" readonly>
+              </div>
+            </div>
+
+
+            <div class="form-row  mx-3 mt-2">
+              <div class="col">
+                <label for="service">&nbspService Charge:</label>
+                <input id="productServiceCharge" type="number" class="form-control" placeholder="service charge:" readonly>
+              </div>
+              <div class="col">
+                <label for="installment">&nbspMonthly Installment:</label>
+                <input id="productMonthlyInstallmentField" type="number" class="form-control" placeholder="monthly installment:" readonly>
+              </div>
+            </div>
+
+            <div class="form-row  mx-3 mt-2">
+              <div class="col">
+                <label for="total">&nbspTotal:</label>
+                <input id="totalPriceField" type="number" class="form-control" placeholder="total" readonly>
+              </div>
+              <div class="col">
+                <label for="due">&nbspDue:</label>
+                <input id="dueField" type="number" class="form-control" placeholder="due" readonly>
+              </div>
+
+            </div>
+
+            <div id="gurantor1">
+              <br>
+              <label class="mt-3 mx-4  text-success"> <strong><i class="fas fa-handshake"></i>&nbsp&nbsp&nbspFirst Guarantor's Info:</strong></label>
+              <br>
+              <div class="form-row mx-3 mt-2">
+                <div class="col">
+                  <label for="guarantormobile">&nbspMobile:</label>
+                  <input id="guarantorMobileField" type="number" class="form-control w-50" placeholder="enter mobile number" required>
+                </div>
+              </div>
+              <div class="form-row  mx-3 mt-2">
+                <div class="col">
+                  <label for="guarantor">&nbspGuarantor Name:</label>
+                  <input id="guarantorNameField" type="text" class="form-control" placeholder="enter guarantor name" style="width:50%;" required>
+                </div>
+              </div>
+              <div class="form-row  mx-3 mt-2">
+                <div class="col">
+                  <label for="guarantormother">&nbspMother:</label>
+                  <input id="guarantorMotherNameField" type="text" class="form-control" placeholder="enter mother's name" required>
+                </div>
+                <div class="col">
+                  <label for="guarantorfather">&nbspFather:</label>
+                  <input id="guarantorFatherNameField" type="text" class="form-control" placeholder="enter father's name" required>
+                </div>
+              </div>
+              <div class="form-row  mx-3 mt-2">
+                <div class="col">
+                  <label for="guarantoraddress">&nbspAddress:</label>
+                  <input id="guarantorAddressField" type="text" class="form-control" placeholder="enter Address" required>
+                </div>
+                <div class="col">
+                  <label for="guarantorpostoffice">&nbspPostoffice:</label>
+                  <input id="guarantorPostofficeField" type="text" class="form-control" placeholder="enter postoffice" required>
+                </div>
+              </div>
+              <div class="form-row  mx-3 mt-2">
+                <div class="col">
+                  <label for="guarantorVillage">&nbspVillage:</label>
+                  <input id="guarantorVillageField" type="text" class="form-control" placeholder="enter Village" required>
+                </div>
+                <div class="col">
+                  <label for="guarantorpostdistrict">&nbspDistrict:</label>
+                  <input id="guarantorDistrictField" type="text" class="form-control" placeholder="enter district" required>
+                </div>
+              </div>
+
+              <div class="form-row  mx-3 mt-2">
+                <div class="col">
+                  <label for="guarantorupzilla">&nbspUpzilla:</label>
+                  <input id="guarantorUpzillaField" type="text" class="form-control w-50" placeholder="enter upzilla" required>
+                </div>
+              </div>
+            </div>
+
+            <div id="gurantor2" style="display:none">
+              <br>
+              <label class="mt-3 mx-4 text-success"><strong><i class="fas fa-handshake"></i>&nbsp&nbsp&nbspSecond Guarantor's Info:</strong></label>
+              <br>
+              <div class="form-row mx-3 mt-2">
+                <div class="col">
+                  <label for="guarantormobile2">&nbspMobile:</label>
+                  <input id="guarantorMobileField2" type="number" class="form-control w-50" placeholder="enter mobile number">
+                </div>
+              </div>
+              <div class="form-row  mx-3 mt-2">
+                <div class="col">
+                  <label for="guarantor2">&nbspGuarantor Name:</label>
+                  <input id="guarantorNameField2" type="text" class="form-control" placeholder="enter guarantor name" style="width:50%;">
+                </div>
+              </div>
+              <div class="form-row  mx-3 mt-2">
+                <div class="col">
+                  <label for="guarantormother2">&nbspMother:</label>
+                  <input id="guarantorMotherNameField2" type="text" class="form-control" placeholder="enter mother's name">
+                </div>
+                <div class="col">
+                  <label for="guarantorfather2">&nbspFather:</label>
+                  <input id="guarantorFatherNameField2" type="text" class="form-control" placeholder="enter father's name">
+                </div>
+              </div>
+              <div class="form-row  mx-3 mt-2">
+                <div class="col">
+                  <label for="guarantoraddress2">&nbspAddress:</label>
+                  <input id="guarantorAddressField2" type="text" class="form-control" placeholder="enter Address">
+                </div>
+                <div class="col">
+                  <label for="guarantorpostoffice2">&nbspPostoffice:</label>
+                  <input id="guarantorPostofficeField2" type="text" class="form-control" placeholder="enter postoffice">
+                </div>
+              </div>
+              <div class="form-row  mx-3 mt-2">
+                <div class="col">
+                  <label for="guarantorVillage2">&nbspVillage:</label>
+                  <input id="guarantorVillageField2" type="text" class="form-control" placeholder="enter Village">
+                </div>
+                <div class="col">
+                  <label for="guarantorpostdistrict2">&nbspDistrict:</label>
+                  <input id="guarantorDistrictField2" type="text" class="form-control" placeholder="enter district">
+                </div>
+              </div>
+
+              <div class="form-row  mx-3 mt-2">
+                <div class="col">
+                  <label for="guarantorupzilla2">&nbspUpzilla:</label>
+                  <input id="guarantorUpzillaField2" type="text" class="form-control " placeholder="enter upzilla">
+                </div>
+                <div class="col" style="margin-top:3.5% ;">
+                  <button id="deleteGuaratorBtn" type="button" class="btn btn-danger" name="button"><i class="fas fa-trash-alt"></i>&nbsp&nbspDelete Guarantor</button>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="form-group mt-5 pl-4 pr-4">
+              <label class="text-success" for="comment"> <i class="fas fa-sticky-note"></i> <strong> &nbsp&nbspNote:</strong> </label>
+              <textarea class="form-control" rows="5" id="comment" placeholder="Write down any info if necessary"></textarea>
+            </div>
+
+            <div class="row mt-5 mb-5">
+              <button id="nextBtn" class="mx-5 btn btn-dark" type="button" name="button"> <i class="fas fa-forward iconcolor"></i>&nbsp&nbspNext</button>
+              <button id="addNewGuarantorBtn" class="mx-5 btn btn-dark" type="button" name="button"> <i class="fas fa-plus iconcolor"></i>&nbsp&nbsp&nbspAdd Another Guarantor </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="container" id="installmentDiv" style="display:none;">
+          <div>
+            <h1 class="text-secondary mt-2">Installments</h1>
+            <form class="mt-2">
+              <div class="form-row mx-3">
+                <div class="col">
+                  <label for="installmentDate">Date. </label>
+                  <input id="installmentDateField" type="date" class="form-control" placeholder="pick date"  required>
+                </div>
+                <div class="col">
+                  <label for="Description">Description </label>
+                  <select class="form-control" name="">
+                    <option value="Installment">Installment</option>
+                    <option value="Invest">Invest</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <label for="receipt">Receipt </label>
+                  <input id="ReceiptField" class="form-control" type="number" name="Receipt No." placeholder="enter Receipt No."  required>
+                </div>
+              </div>
+
+              <div class="form-row mx-3 mt-3">
+                <div class="col">
+                  <label for="collection">Collection Type </label>
+                  <select class="form-control" name="">
+                    <option value="Installment">Installment</option>
+                    <option value="Fine">Fine</option>
+                    <option value="Invest">Rent</option>
+                  </select>
+                </div>
+                <div class="col">
+                  <label for="investmentstatus">Investment Status </label>
+                  <input id="investmentstatusField"class="form-control" type="number"  placeholder="investment status" >
+                </div>
+                <div class="col">
+                  <label for="Issuedby">Issued By </label>
+                  <input id="issuedbyfield" class="form-control" type="number" placeholder="issued by" >
+                </div>
+              </div>
+              <button id="istallmentNextBtn" style="float:right;" class="mt-5 mx-3 btn btn-dark" type="submit" name="button"> <i class="fas fa-forward iconcolor"></i>&nbsp&nbspNext</button>
+            </form>
+            <button class="btn btn-dark mt-5 mx-2 ml-4" type="button" name="button"><i class="iconcolor fas fa-eraser"></i>&nbsp&nbspSkip</button>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/home.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="bootstrap/jquery-3.3.1.slim.min.js"></script>
+  <script src="bootstrap/popper.min.js"></script>
+</body>
+
+</html>

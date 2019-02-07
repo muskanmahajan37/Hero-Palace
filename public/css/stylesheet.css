@@ -1,0 +1,47 @@
+html,body{
+  height: 100%;
+}
+
+.centerdiv{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.primarycolor{
+  background-color: #383738;
+}
+
+.secondarycolor{
+  background-color: #584C50;
+}
+
+.btncolor{
+  background-color:#FFD74F;
+}
+
+.iconcolor{
+
+  color:#FFD74F;
+}
+
+.color1{
+  color:#69B3A0;
+}
+
+.textcolor{
+  color: #ECD8B6;
+}
+
+.blackicon{
+  color: #373536;
+}
+
+.infotext{
+  color: #373536;
+}
+
+a:hover{
+color: #ECD8B6;
+}

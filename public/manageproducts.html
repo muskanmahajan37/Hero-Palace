@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hero Palace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row h-100 ">
+      <div class="col-lg-3 col-xs-12 primarycolor h-100 " style="position:fixed">
+        <div class="list-group primarycolor mt-3">
+          <a href="#" style="height:6rem;" class="mx-3 text-center list-group-item list-group list-item-action  primarycolor shadow-lg">
+            <i class="fas fa-motorcycle fa-4x  iconcolor"></i></a>
+
+          <div class="mt-5">
+            <a id="productlistBtn" href="#" style="height:3rem;" class=" mx-3 mb-1 mt-2  text-white  list-group-item list-group list-item-action  primarycolor shadow-lg">
+              <i class="fas fa-list-alt iconcolor"></i>&nbsp&nbsp&nbsp&nbsp&nbsp Product List</a>
+            <a id="addproductBtn" href="#" style="height:3rem;" class=" mx-3 mb-1 mt-2  text-white  list-group-item list-group list-item-action  primarycolor shadow-lg">
+              <i class="fas fa-list-alt iconcolor"></i>&nbsp&nbsp&nbsp&nbsp&nbsp Add Product</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-9 col-xs-12 offset-3">
+        <div class="row primarycolor " style="height:100px;">
+          <div class="col-lg-8 col-xs-12">
+
+          </div>
+          <div class="col-lg-2 col-xs-12">
+
+            <button id="backToHomepageBtn" class="btn btn-warning m-4 "  type="button" name="button">
+              <i class="fas fa-home"></i>&nbsp&nbspBack to HomePage</button>
+
+          </div>
+        </div>
+
+        <div class="container" id="productlistDiv">
+          <h1 class="text-secondary text-center mt-3">Available Products</h1>
+          <table class="table mt-5 ">
+            <thead class="bg-secondary ">
+              <tr>
+                <th class="text-white text-center" scope="col">Product Name</th>
+                <th class="text-white text-center" scope="col">Colors</th>
+                <th class="text-white" scope="col">Price</th>
+              </tr>
+            </thead>
+            <tbody id="producttableBody">
+            </tbody>
+          </table>
+        </div>
+
+        <div id="editproductDiv" style="display:none;">
+          <div class="row">
+            <div class="col-lg-5 col-xs-12">
+              <div class="card m-3 shadow-lg">
+                <div class="card-img secondarycolor text-center">
+                  <i class="m-4 fas fa-motorcycle fa-4x  iconcolor"></i>
+                  <div>
+                    <h3 class="text-white">Update BIKE Info</h3>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <form id="bikeform">
+                    <div class="form-group">
+                      <label for="bikemodel">Bike Model</label>
+                      <input type="text" class="form-control" id="bikemodelEditField" placeholder="Enter bike model" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="bikeprice">Bike Price</label>
+                      <input type="number" class="form-control" id="bikepriceEditField" placeholder="Enter bike price" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="bikecolor">Bike Colors</label>
+                      <input type="text" class="form-control" id="bikecolorEditField" placeholder="use comma to separate colors" required>
+                    </div>
+                    <input id="updateProductBtn" class="btn btncolor" type="submit" name="update" value="Update Product">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="addproudctDiv" style="display:none;">
+          <div class="row">
+            <div class="col-lg-5 col-xs-12">
+              <div class="card m-3 shadow-lg">
+                <div class="card-img secondarycolor text-center">
+                  <i class="m-4 fas fa-motorcycle fa-4x  iconcolor"></i>
+                  <div>
+                    <h3 class="text-white">BIKE</h3>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <form id="bikeform">
+                    <div class="form-group">
+                      <label for="bikemodel">Bike Model</label>
+                      <input type="text" class="form-control" id="bikemodelField" placeholder="Enter bike model" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="bikeprice">Bike Price</label>
+                      <input type="number" class="form-control" id="bikepriceField" placeholder="Enter bike price" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="bikecolor">Bike Colors</label>
+                      <input type="text" class="form-control" id="bikecolorField" placeholder="use comma to separate colors" required>
+                    </div>
+                    <input id="submitproductBtn" class="btn secondarycolor text-white" type="submit" name="Submit">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="addedProductSuccessDiv" class="container mx-auto mt-5  text-center" style="display:none;">
+          <h2 class=" text center text-success mt-5">Added Product Successfully&nbsp&nbsp<i class="fas fa-check-circle"></i></h2>
+          <button class=" mt-5 btn btn-success btn-lg" id="addanotherBtn" type="button" name="button">Add Another</button>
+        </div>
+        <div id="overiteWarningDiv" style="display:none;" class="container mx-auto mt-5  text-center">
+          <i class="text-danger fas fa-exclamation-triangle fa-4x"></i>
+          <h3 class=" text center text-black mt-5">The product name you entered already exist in reposistory!!&nbsp&nbsp
+          </h3>
+          <button class=" mt-5 btn btn-warning btn-lg" id="gotoproductlist" type="button" name="button">Go to product List</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="bootstrap/jquery-3.3.1.slim.min.js"></script>
+  <script src="bootstrap/popper.min.js"></script>
+  <script type="text/javascript" src="js/manageproduct.js"></script>
+</body>
+
+</html>

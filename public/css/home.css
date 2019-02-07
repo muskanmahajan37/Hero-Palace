@@ -1,0 +1,16 @@
+
+.onsignIn{
+width: 100%;
+height: 100%;
+background: #584C50;
+position :fixed;
+top:0;
+left:0;
+z-index: 1;
+}
+
+.logotext{
+
+  margin: 15% auto 10% auto;
+
+}
